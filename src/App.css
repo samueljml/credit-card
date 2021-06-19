@@ -1,25 +1,192 @@
+body {
+	height: 100%;
+	margin: 0;
+	background: #daebf9;
+}
+
 .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	margin: 60px 10px;
+}
+
+#credit-card {
+	position: absolute;
+	top: 60px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	border-radius: 20px;
+	width: 460px;
+	min-width: 250px;
+	min-height: 300px;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out;
+}
+
+.set-rotate {
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	border-radius: 20px;
+}
+
+.card-front {
+	border-radius: 15px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	background-color: #ddd;
+}
+
+.card-back {
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	background-color: #999;
+}
+
+#form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-top: 160px;
+	margin: 150px;
+	height: 400px;
+	width: 580px;
+	border-radius: 10px;
+	background: #ffffff;
+	margin-bottom: 20px;
+}
+
+#credit-card-number {
+	position: absolute;
+	display: flex;
+	align-self: center;
+	font-size: 35px;
+}
+
+#credit-card-div {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50%;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#form-card {
+	display: flex;
+	flex-direction: column;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#security-data {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-left: 40px;
+	margin-right: 40px;
+	height: auto;
+}
+
+#expiration-date {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+}
+
+#expiration-date-select {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#cvv {
+	display: flex;
+	flex-direction: column;
+	width: 160px;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+input,
+section {
+	height: 40px;
+	border-radius: 5px;
 }
 
 section {
 	display: flex;
-
-	flex: 1;
-
-	min-width: 300px;
-	min-height: 300px;
+	flex-direction: row;
 }
 
-#credit-card {
-	background-color: #ddd;
-	width: 400px;
+input {
+	border: #000 1px solid;
+	padding-left: 10px;
+	font-size: 20px;
 }
 
-#form {
-	background-color: rgb(63, 49, 49);
-	width: 600px;
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+select {
+	height: 44px;
+	min-width: 40px;
+	width: 80%;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+select + select {
+	margin-left: 10px;
+}
+
+button {
+	height: 46px;
+	margin-left: 40px;
+	margin-right: 40px;
+	background: rgb(24, 89, 173);
+	border: none;
+	border-radius: 8px;
+	color: #eee;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	color: #000;
+	font-weight: bold;
+	-webkit-text-stroke: 0.3px black;
+}
+
+#card-cvv {
+	text-align: end;
+	padding-right: 10px;
+}
+
+#lable-credit-card-holder {
+	max-width: 315;
+	text-overflow: ellipsis;
 }
